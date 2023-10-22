@@ -80,6 +80,10 @@ export class AppService {
         "city_id": 1,
         "groups": [
           {
+            "type": "country",
+            "name": "Россия"
+          },
+          {
             "type": "city",
             "name": "Москва г."
           },
@@ -98,6 +102,10 @@ export class AppService {
         "name": "Степан",
         "city_id": 1,
         "groups": [
+          {
+            "type": "country",
+            "name": "Россия"
+          },
           {
             "type": "city",
             "name": "Москва г."
@@ -118,6 +126,10 @@ export class AppService {
         "city_id": 1,
         "groups": [
           {
+            "type": "country",
+            "name": "Россия"
+          },
+          {
             "type": "city",
             "name": "Москва г."
           },
@@ -136,6 +148,10 @@ export class AppService {
         "name": "Алексей",
         "city_id": 1,
         "groups": [
+          {
+            "type": "country",
+            "name": "Россия"
+          },
           {
             "type": "city",
             "name": "Москва г."
@@ -156,6 +172,10 @@ export class AppService {
         "city_id": 1,
         "groups": [
           {
+            "type": "country",
+            "name": "Россия"
+          },
+          {
             "type": "city",
             "name": "Москва г."
           },
@@ -174,6 +194,10 @@ export class AppService {
         "name": "Антонина",
         "city_id": 1,
         "groups": [
+          {
+            "type": "country",
+            "name": "Россия"
+          },
           {
             "type": "city",
             "name": "Москва г."
@@ -194,6 +218,10 @@ export class AppService {
         "city_id": 1,
         "groups": [
           {
+            "type": "country",
+            "name": "НеРоссия"
+          },
+          {
             "type": "city",
             "name": "Воронеж г."
           },
@@ -212,6 +240,10 @@ export class AppService {
         "name": "Александр",
         "city_id": 1,
         "groups": [
+          {
+            "type": "country",
+            "name": "НеРоссия"
+          },
           {
             "type": "city",
             "name": "Воронеж г."
@@ -232,6 +264,10 @@ export class AppService {
         "city_id": 1,
         "groups": [
           {
+            "type": "country",
+            "name": "НеРоссия"
+          },
+          {
             "type": "city",
             "name": "Воронеж г."
           },
@@ -250,6 +286,10 @@ export class AppService {
         "name": "Василий",
         "city_id": 1,
         "groups": [
+          {
+            "type": "country",
+            "name": "НеРоссия"
+          },
           {
             "type": "city",
             "name": "Воронеж г."
@@ -270,6 +310,10 @@ export class AppService {
         "city_id": 1,
         "groups": [
           {
+            "type": "country",
+            "name": "123"
+          },
+          {
             "type": "city",
             "name": "Санкт-Петербург г."
           },
@@ -288,6 +332,10 @@ export class AppService {
         "name": "Виктория",
         "city_id": 1,
         "groups": [
+          {
+            "type": "country",
+            "name": "123"
+          },
           {
             "type": "city",
             "name": "Санкт-Петербург г."
