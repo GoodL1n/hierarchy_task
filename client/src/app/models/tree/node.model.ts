@@ -1,7 +1,9 @@
+import { Citizen } from "../citizen.model"
+
 export interface Node {
     city_id: number
     name: string
-    children?: any[]
-    citizens?: any[]
+    children?: Node[]
+    citizens?: Citizen[]
   }
   

@@ -20,7 +20,7 @@ export class Citizen{
     @Column()
     city_id: number
 
-    @ManyToMany(() => Group, (group) => group.citizens, {eager: true})
+    @ManyToMany(() => Group, (group) => group.citizens, {eager: true, onDelete: 'CASCADE'})
     @JoinTable({
         name: 'citizen_group',
         joinColumn: {

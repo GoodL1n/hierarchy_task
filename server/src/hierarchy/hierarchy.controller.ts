@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Post } from '@nestjs/common';
 import { HierarchyService } from './hierarchy.service';
 import { Citizen } from 'src/entities/citizen.entity';
 import { City } from 'src/entities/city.entity';
@@ -25,5 +25,10 @@ export class HierarchyController {
     @Post('import/cities')
     async importCities(@Body() cities: City[]){
       await this.hierarchyService.importCities(cities)
+    }
+
+    @Delete('citizens')
+    async deleteCitizens(){
+      await this.hierarchyService.deleteCitizens()
     }
 }

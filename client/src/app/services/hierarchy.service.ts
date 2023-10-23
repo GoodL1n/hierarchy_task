@@ -24,6 +24,10 @@ export class HierarchyService {
     return this.http.post<Citizen[]>(`http://localhost:8000/api/hierarchy/import/citizens`, citizens)
   }
 
+  deleteCitizens(): Observable<void>{
+    return this.http.delete<void>(`http://localhost:8000/api/hierarchy/citizens`)
+  }
+
   importCities(cities: City[]): Observable<City[]>{
     return this.http.post<City[]>(`http://localhost:8000/api/hierarchy/import/cities`, cities)
   }

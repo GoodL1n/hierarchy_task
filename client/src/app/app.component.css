@@ -1,7 +1,23 @@
-.import-buttons {
+.header{
     display: flex;
-    width: 40%;
+    flex-direction: column;
+    width: 30vw;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 10px;
     margin: 15px;
-    padding: 15px;
-    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.header__title{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.header__manage-models{
+    display: flex;
+    justify-content: center;
+}
+
+.custom-button{
+    margin-left: 1vw;
 }

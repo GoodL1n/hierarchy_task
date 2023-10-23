@@ -1,8 +1,15 @@
-<div class = "import-buttons">
-    <input type="file" style="display: none;" #fileInput (change)="importCities($event)" accept=".json">
-    <button mat-stroked-button (click)="fileInput.click()">Импорт городов</button>
-
-    <input type="file" style="display: none;" #fileInput2 (change)="importCitizens($event)" accept=".json">
-    <button mat-stroked-button (click)="fileInput2.click()">Импорт жителей</button>
+<div class = "header">
+        <div class = "header__title">
+            <span>Панель управления: </span>
+        </div>
+        <div class = "header__manage-models">
+            <input type="file" style="display: none;" #fileInput (change)="importCities($event)" accept=".json">
+            <button mat-stroked-button (click)="fileInput.click()">Импорт городов</button>
+        
+            <input type="file" style="display: none;" #fileInput2 (change)="importCitizens($event)" accept=".json">
+            <button class = "custom-button" mat-stroked-button (click)="fileInput2.click()">Импорт жителей</button>
+        
+            <button class = "custom-button" mat-stroked-button (click)="deleteCitizens()">Удалить жителей</button>
+        </div>
 </div>
-<app-tree></app-tree>
+<app-tree [isImport]="isImport"></app-tree>
