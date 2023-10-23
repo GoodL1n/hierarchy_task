@@ -4,12 +4,33 @@ services:
   postgres:
     image: postgres:latest
     volumes:
-    - /data/postgres:/data/postgres
+      - postgres:/var/lib/postgresql/data
+      - ./docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
     environment:
-        POSTGRES_USER: user
-        POSTGRES_PASSWORD: user
-        POSTGRES_DB: hierarchy_db
+        POSTGRES_USER: hierarchydb
+        POSTGRES_PASSWORD: hierarchydb
+        POSTGRES_DB: hierarchydb
     ports:
       - 5432:5432
+    restart: unless-stopped
+
+  server:
+    build: server/
+    command: npm run start
+    ports:
+      - 8000:3000
+    depends_on:
+      - postgres
+
+  client:
+    build: client/
+    labels:
+      SERVICE_CHECK_INTERVAL: 10s
+    ports:
+      - 4200:80
+    depends_on:
+      - server
 
 
+volumes:
+  postgres:

@@ -7,6 +7,7 @@ import { TreeComponent } from './components/tree/tree.component';
 import { MaterialUiModule } from './material-ui/material-ui.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TooltipDirective } from './directives/tooltip.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TooltipDirective } from './directives/tooltip.directive';
     BrowserModule,
     AppRoutingModule,
     MaterialUiModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

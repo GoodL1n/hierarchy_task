@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TestService } from './test.service';
+import { HierarchyService } from './hierarchy.service';
 
-describe('TestService', () => {
-  let service: TestService;
+describe('HierarchyService', () => {
+  let service: HierarchyService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(TestService);
+    service = TestBed.inject(HierarchyService);
   });
 
   it('should be created', () => {

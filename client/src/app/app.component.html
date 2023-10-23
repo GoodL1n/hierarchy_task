@@ -1,1 +1,8 @@
+<div class = "import-buttons">
+    <input type="file" style="display: none;" #fileInput (change)="importCities($event)" accept=".json">
+    <button mat-stroked-button (click)="fileInput.click()">Импорт городов</button>
+
+    <input type="file" style="display: none;" #fileInput2 (change)="importCitizens($event)" accept=".json">
+    <button mat-stroked-button (click)="fileInput2.click()">Импорт жителей</button>
+</div>
 <app-tree></app-tree>

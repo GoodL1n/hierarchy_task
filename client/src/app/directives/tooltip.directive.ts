@@ -1,13 +1,7 @@
 import { Directive, ElementRef, HostListener, Input, inject } from '@angular/core';
-import { TestService } from '../services/test.service';
 import { MatTooltip } from '@angular/material/tooltip';
-
-
-export interface City{
-  id: number
-  name: string
-  data: string
-}
+import { HierarchyService } from '../services/hierarchy.service';
+import { City } from '../models/city.model';
 
 @Directive({
   selector: '[toolTip]',
@@ -17,12 +11,19 @@ export interface City{
   },
   providers: [MatTooltip],
 })
+
 export class TooltipDirective{
 
   @Input() city_id!: string;
 
+  cities: City[] = []
+
   constructor(private matTooltip: MatTooltip,
-    private testService: TestService) { }
+    private hierarchyService: HierarchyService) { 
+      this.hierarchyService.getCities().subscribe(data => {
+        this.cities = data
+      })
+    }
 
   onMouseEnter() {
     const city = this.searchCity(Number(this.city_id))
@@ -35,6 +36,6 @@ export class TooltipDirective{
   }
 
   searchCity(city_id: number): City{
-    return this.testService.getCities().find(city => city.id == city_id)!
+    return this.cities.find(city => city.id == city_id)!
   }
 }
